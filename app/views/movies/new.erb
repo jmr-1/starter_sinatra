@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Add a new movie</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        <h1>Add a new movie!</h1>
+
+        <form method="post" action="/movies">
+            <ul>
+            <li>
+                <label for="title">Title</label>
+                <input name="title" type="text">
+            </li>
+
+            <li>
+            <label for="length">Length</label>
+            <input name="length" type="number" step="1">
+            </li>
+
+            <li>
+            <label for="genre">Genre</label>
+            <input name="genre" type="text">
+            </li>
+
+            <input type="submit" value="Add this movie">
+            </ul>
+        </form>
+
+        <a href="/movies">Click to go back to the list of movies</a>
+        <br>
+        <a href="/home">Click to go back to the home page</a>
+    </body>
+</html>

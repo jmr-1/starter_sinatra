@@ -11,9 +11,12 @@ bruce = Actor.create(name: "Bruce Willis", age: 50, experience: 30)
 sheen = Actor.create(name: "Charlie Sheen", age: 60, experience: 20)
 hammill = Actor.create(name: "Mark Hammill", age: 65, experience: 25)
 
-Role.create(movie_id: 1, actor_id: 1)
-Role.create(movie_id: 2, actor_id: 1)
-Role.create(movie_id: 3, actor_id: 2)
-Role.create(movie_id: 3, actor_id: 2)
-Role.create(movie_id: 4, actor_id: 1)
-Role.create(movie_id: 4, actor_id: 3)
+star_wars.actors << bruce 
+star_wars.actors << hammill
+godzilla.actors << sheen
+godzilla.actors << hammill
+comedy.actors << bruce 
+comedy.actors << sheen 
+horror.actors << hammill
+horror.actors << bruce 
+

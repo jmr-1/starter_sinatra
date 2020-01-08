@@ -16,11 +16,13 @@
         <ul>
         <% @movies.each do |movie| %>
             <li>
-            <a href="/"> <%=movie.title  %> </a>
+            <a href="/movies/<%= movie.id %>"> <%=movie.title  %> </a>
             </li>
         <% end %>
         </ul>
 
+        <br>
+        <a href="/movies/new">Click to add a new movie </a>
         <br>
         <a href="/home">Go back to the home page</a>
     </body>
