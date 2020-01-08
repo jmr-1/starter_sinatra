@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Genre Index</title>
+  </head>
+  <body>
+
+    <h1>Available genres</h1>
+
+    <form action="/genres" method="post">
+      <label for='genre'>Please select a genre:</label>
+        <select name='genre'>
+            <% @genres.each do |genre|%>
+            <option name="genre" value="<%= genre %>"><%= genre %></option>
+            <% end %>
+        </select>
+        <input type="submit" name="submit" value="Search">
+    </form>
+
+  </body>
+</html>

@@ -12,6 +12,15 @@
       <li>Experience: <%= @actor.experience%></li>
     </ul>
 
+    <h2>List of <%= @actor.name %></h2>
+
+    <% @actor.movies.each do |movie| %>
+        <ul>
+          <li><a href="/movies/<%= movie.id %>"><%= movie.title %></a></li>
+        </ul>
+
+    <% end %>
+
     <h2><a href="/actors/<%= @actor.id %>/edit">Click to edit this Actor</a></h2>
     <a href="/actors"> Click to head back to the Actor Index</a>
     <br>

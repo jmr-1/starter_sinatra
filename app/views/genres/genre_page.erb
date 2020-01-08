@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Movies of the genre</title>
+  </head>
+  <body>
+
+    <h1>"Movies of <%= @title_genre %> genre"</h1>
+
+    <% @genre.each do |movie| %>
+      <ul>
+        <li><a href="/movies/<%= movie.id %>"><%= movie.title %></a> </li>
+      </ul>
+    <% end %>
+
+  </body>
+</html>
