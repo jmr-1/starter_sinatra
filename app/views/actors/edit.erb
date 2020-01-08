@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>"Edit <%= @actor.name %> Info"</title>
+  </head>
+  <body>
+
+    <form action="/actors/<%= @actor.id%>" method="post">
+      <input type="hidden" name="_method" value="patch">
+      <ul>
+        <li>
+          <label for="name">Name</label>
+          <input type="text" name="name" value="<%= @actor.name %>">
+        </li>
+        <li>
+          <label for="age">Age</label>
+          <input type="text" name="age" value="<%= @actor.age %>">
+        </li>
+        <li>
+          <label for="experience">Experience</label>
+          <input type="text" name="experience" value="<%= @actor.experience %>">
+        </li>
+          <li><input type="submit" value="Add Actor">
+        </li>
+      </ul>
+    </form>
+
+  </body>
+</html>

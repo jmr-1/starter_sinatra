@@ -1,15 +1,20 @@
 class MovieController < Sinatra::Base
 
-    configure do 
+    configure do
 
         set :public_folder, "public"
         set :views, "app/views/movies"
         set :method_override, true
-    end 
+    end
 
 
-    get '/movies' do 
+    get '/movies' do
         @movies = Movie.all
         erb :index
-    end 
-end 
+    end
+
+    get "/movies/:id" do
+      @movie = find_by_id(params[:id])
+      erb :show
+    end
+end

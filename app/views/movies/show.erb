@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>"<%= @movie.title%>'s Page"</title>
+  </head>
+  <body>
+
+    <ul>
+      <li>Movie Title: <%= @movie.title %></li>
+      <li>Runtime: <%= @movie.length %></li>
+      <li>Genre <%= @movie.genre %></li>
+    </ul>
+
+    <a href="/movies">Back to Movies</a>
+    <br>
+    <a href="/home">Back to the home page</a>
+
+  </body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>"<%= @actor.name %>'s Page"</title>
+  </head>
+  <body>
+
+    <ul>
+      <li>Name: <%= @actor.name %></li>
+      <li>Age: <%= @actor.age %></li>
+      <li>Experience: <%= @actor.experience%></li>
+    </ul>
+
+    <h2><a href="/actors/<%= @actor.id %>/edit">Click to edit this Actor</a></h2>
+    <a href="/actors"> Click to head back to the Actor Index</a>
+    <br>
+    <a href="/home"> Click to head back to the Home Page</a>
+  </body>
+</html>
